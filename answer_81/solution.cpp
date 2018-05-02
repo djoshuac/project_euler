@@ -3,15 +3,15 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <limits>
 using namespace std;
 
 typedef long long ll;
 
 int main() {
-  ll MAX = 1000000001;
   int n;
   cin >> n;
-  vector<ll> dp(n + 1, MAX);
+  vector<ll> dp(n + 1, numeric_limits<ll>::max());
   dp[1] = 0;
   ll aij;
   for (int i = 0; i < n; i++) {
